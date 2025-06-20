@@ -165,28 +165,31 @@
 
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            align-items: start;
         }
 
         .photo-item {
-            aspect-ratio: 1;
             border-radius: 15px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.1);
         }
 
         .photo-item:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
         .photo-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             display: block;
+            object-fit: contain;
+            max-height: 400px;
         }
 
         .surprise-button {
@@ -315,7 +318,7 @@
                 </div>
             </div>
             <p style="color: rgba(255,255,255,0.8); text-align: center; margin-top: 20px; font-style: italic;">
-               
+                (Replace these placeholders with your favorite photos together!)
             </p>
         </div>
 
